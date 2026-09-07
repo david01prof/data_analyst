@@ -13,8 +13,8 @@ problemas de negocio mediante el uso de datos a escala.
 - Pandas, NumPy
 
 **Machine Learning & Analítica**
-- Scikit-Learn, Spark MLlib
-- Regresión (lineal/logística)
+- Scikit-Learn, XGBoost, Spark MLlib
+- Regresión (lineal/logística), clasificación (XGBoost + K-Fold Cross Validation)
 
 **Visualización**
 - Seaborn, Matplotlib
@@ -29,9 +29,10 @@ problemas de negocio mediante el uso de datos a escala.
 
 | Proyecto | Descripción | Tecnologías clave |
 | :--- | :--- | :--- |
-| [`01_PROCESAMIENTO_Y_EDA/`](./01_PROCESAMIENTO_Y_EDA) | Análisis exploratorio de datos, tratamiento de nulos y *feature engineering* sobre [dataset de seguros médicos] usando PySpark. | PySpark, Pandas, Seaborn |
+| [`01_PROCESAMIENTO_Y_EDA/`](./01_PROCESAMIENTO_Y_EDA) | Análisis exploratorio de datos, tratamiento de nulos y *feature engineering* sobre dataset de seguros médicos usando PySpark. | PySpark, Pandas, Seaborn |
+| [`02_CLASIFICACION_NYC_RESTAURANTS/`](./02_CLASIFICACION_NYC_RESTAURANTS) | Clasificación binaria del GRADE (A vs B/C) de restaurantes de NYC a partir del dataset de inspecciones del DOHMH (NYC Open Data). Incluye EDA, limpieza, feature engineering y modelado con XGBoost + GroupKFold. ⚠️ Incluye advertencia documentada de data leakage (GRADE es función determinista de SCORE). | Pandas, Scikit-Learn, XGBoost, Seaborn |
 
-> 🔜 Próximos módulos en desarrollo: pipelines ETL, modelos de clasificación/clustering con Spark MLlib y un proyecto final end-to-end.
+> 🔜 Próximos módulos en desarrollo: pipelines ETL, modelos de clustering con Spark MLlib y un proyecto final end-to-end.
 
 ---
 
@@ -39,8 +40,9 @@ problemas de negocio mediante el uso de datos a escala.
 
 ```text
 .
-├── 01_PROCESAMIENTO_Y_EDA/   # Notebooks de análisis exploratorio y preprocesado con PySpark
-├── data/                     # Datasets de muestra utilizados en los proyectos
+├── 01_PROCESAMIENTO_Y_EDA/           # Notebooks de análisis exploratorio y preprocesado con PySpark
+├── 02_CLASIFICACION_NYC_RESTAURANTS/ # Clasificación de GRADE con XGBoost (dataset NYC OpenData)
+├── data/                             # Datasets de muestra utilizados en los proyectos
 ├── .gitignore
 └── README.md
 ```
@@ -52,6 +54,9 @@ problemas de negocio mediante el uso de datos a escala.
 ```bash
 git clone https://github.com/david01prof/data_analyst.git
 cd data_analyst
-pip install -r requirements.txt   # (pendiente de añadir)
+pip install -r requirements.txt
 jupyter notebook
 ```
+
+Cada módulo incluye su propio `README.md` con el detalle del pipeline, resultados y, cuando
+aplica, advertencias metodológicas a tener en cuenta antes de reutilizar el modelo.
