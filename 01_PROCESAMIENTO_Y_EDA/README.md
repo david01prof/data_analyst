@@ -30,6 +30,8 @@ Fuente: [stedy/Machine-Learning-with-R-datasets](https://github.com/stedy/Machin
 | 4. Log + CV + interacción | 0.389 | 9,786 $ | 4,299 $ |
 | **5. Lineal + CV + interacción fumador × obeso (sin log)** | **0.895** | **4,048 $** | **2,305 $** |
 
+![Cargos médicos por hábito de fumar y obesidad](img/fumador_obeso.png)
+
 **Hallazgos:**
 
 - El coste lo determina sobre todo fumar y la obesidad **combinados**: un fumador obeso cuesta de media ≈ 42 k$ frente a ≈ 21 k$ del fumador no obeso.

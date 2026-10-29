@@ -50,6 +50,8 @@ El modelo detecta bien la clase A, y para B/C (el 24 % de los casos, que es la q
 
 **Variables más importantes (ganancia):** `VIOL_10F`, `VIOL_08A`, `num_violaciones`, `CRITICAL FLAG_Not Critical`, `VIOL_06D`, más algunos tipos de cocina (donuts, hamburguesas, café/té).
 
+![Importancia de las variables (ganancia)](img/importancia_features.png)
+
 ## ⚠️ Fuga de datos detectada y corregida
 
 La primera versión del modelo daba un ROC-AUC de ≈ 0.9998, un resultado demasiado bueno para ser cierto. La causa era una **fuga de información (data leakage)**:
@@ -87,6 +89,7 @@ jupyter notebook index.ipynb
 ```text
 02_CLASIFICACION_NYC_RESTAURANTS/
 ├── index.ipynb          # Notebook con el pipeline completo
+├── img/                 # Figuras usadas en este README
 ├── data/
 │   └── RestaurantInspectionDataDictionary_09242018.xlsx   # Diccionario de columnas (el CSV se descarga aparte)
 ├── doc/
