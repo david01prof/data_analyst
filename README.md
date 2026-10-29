@@ -15,6 +15,7 @@ problemas de negocio mediante el uso de datos a escala.
 **Machine Learning & Analítica**
 - Scikit-Learn, XGBoost, Spark MLlib
 - Regresión (lineal/logística), clasificación (XGBoost + K-Fold Cross Validation)
+- Redes neuronales (MLP), PCA, t-SNE y GridSearchCV
 
 **Visualización**
 - Seaborn, Matplotlib
@@ -32,6 +33,7 @@ problemas de negocio mediante el uso de datos a escala.
 | [`01_PROCESAMIENTO_Y_EDA/`](./01_PROCESAMIENTO_Y_EDA) | EDA y regresión lineal sobre costes de seguros médicos con PySpark (pandas-on-Spark y Spark ML): preprocesado sin fuga, ajuste con Hyperopt y validación cruzada, y comparación de cinco modelos (R² test 0.80 → 0.90 al modelar la interacción fumador × obeso). | PySpark, Pandas, Seaborn |
 | [`02_CLASIFICACION_NYC_RESTAURANTS/`](./02_CLASIFICACION_NYC_RESTAURANTS) | Clasificación binaria del GRADE (A vs B/C) de restaurantes de NYC a partir del dataset de inspecciones del DOHMH (NYC Open Data). Incluye EDA, limpieza, feature engineering y modelado con XGBoost + GroupKFold. Documenta la fuga de datos detectada (GRADE es función determinista de SCORE) y su corrección: ROC-AUC 0.999 → 0.83 real. | Pandas, Scikit-Learn, XGBoost, Seaborn |
 | [`03_ACCIDENTES_MADRID/`](./03_ACCIDENTES_MADRID) | EDA de los partes de accidentes de Madrid (2024) respetando la granularidad persona/accidente, análisis geográfico con KDE y modelo de regresión logística para predecir positivos en alcohol, con evaluación completa (precision, recall, F1) y sin fuga de datos. | Pandas, Scikit-Learn, Seaborn |
+| [`04_CLASIFICACION_DIGITOS_MLP/`](./04_CLASIFICACION_DIGITOS_MLP) | Clasificación de dígitos manuscritos (8×8 píxeles) de principio a fin: distancias, escalado y su sensibilidad a outliers, PCA y t-SNE, MLP con comparación de arquitecturas y pipeline con `GridSearchCV` reservando el test antes de la búsqueda (97,8 % en test). Compara además con SVM, regresión logística, KNN y Random Forest. | Scikit-Learn, Pandas, Seaborn |
 
 > 🔜 Próximos módulos en desarrollo: pipelines ETL, modelos de clustering con Spark MLlib y un proyecto final end-to-end.
 
@@ -44,6 +46,7 @@ problemas de negocio mediante el uso de datos a escala.
 ├── 01_PROCESAMIENTO_Y_EDA/           # Notebooks de análisis exploratorio y preprocesado con PySpark
 ├── 02_CLASIFICACION_NYC_RESTAURANTS/ # Clasificación de GRADE con XGBoost (dataset NYC OpenData)
 ├── 03_ACCIDENTES_MADRID/             # EDA y regresión logística (alcohol) sobre accidentes de Madrid
+├── 04_CLASIFICACION_DIGITOS_MLP/     # Dígitos manuscritos: preprocesado, PCA/t-SNE, MLP y comparativa de modelos
 ├── .gitignore
 └── README.md
 ```
