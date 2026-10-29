@@ -1,1 +1,4 @@
 *.csv
+
+# Excepción: dataset pequeño (1.338 filas) necesario para ejecutar el módulo 01
+!01_PROCESAMIENTO_Y_EDA/insurance.csv
